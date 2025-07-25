@@ -8,5 +8,5 @@ menu "Example configuration"
             default, and ends at `0x65`.  See "7.2 Device Addressing" in the
             datasheet. See `mcp4725.h` for all possible values.
 
-    rsource "../../../../devtools/Kconfig.i2c"
+    rsource "../../../Kconfig.i2c"
 endmenu
