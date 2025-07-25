@@ -1,5 +1,9 @@
 # esp-idf-lib/mcp4725
 
+[![Build examples](https://github.com/esp-idf-lib/mcp4725/actions/workflows//build.yml/badge.svg)](https://github.com/esp-idf-lib/mcp4725/actions/workflows//build.yml)
+[![Build docs](https://github.com/esp-idf-lib/mcp4725/actions/workflows//build-docs.yml/badge.svg)](https://github.com/esp-idf-lib/mcp4725/actions/workflows//build-docs.yml)
+[![Validation](https://github.com/esp-idf-lib/mcp4725/actions/workflows//validate-component.yml/badge.svg)](https://github.com/esp-idf-lib/mcp4725/actions/workflows//validate-component.yml)
+
 Driver for 12-bit DAC MCP4725.
 
 * [Documentation](https://esp-idf-lib.github.io/mcp4725/)
@@ -11,7 +15,7 @@ Driver for 12-bit DAC MCP4725.
 ## Installation
 
 ```sh
-idf.py add-dependency esp-idf-lib/mcp4725^1.0.0
+idf.py add-dependency esp-idf-lib/mcp4725
 ```
 
 ## Support
