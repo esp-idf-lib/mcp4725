@@ -11,7 +11,7 @@ Driver for 12-bit DAC MCP4725.
 ## Installation
 
 ```sh
-idf.py add-dependency "esp-idf-lib/mcp4725^1.0.0
+idf.py add-dependency esp-idf-lib/mcp4725^1.0.0
 ```
 
 ## Support
