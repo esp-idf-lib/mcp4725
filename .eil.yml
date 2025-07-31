@@ -1,7 +1,7 @@
 ---
 name: mcp4725
 description: Driver for 12-bit DAC MCP4725
-version: 1.0.6
+version: 1.0.7
 groups:
   - adc-dac
 code_owners: UncleRus
