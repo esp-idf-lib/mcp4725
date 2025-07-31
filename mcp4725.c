@@ -119,10 +119,11 @@ esp_err_t mcp4725_set_power_mode(i2c_dev_t *dev, bool eeprom, mcp4725_power_mode
     uint16_t value;
     CHECK(mcp4725_get_raw_output(dev, eeprom, &value));
 
-    uint8_t data[] = {
+    uint8_t data[] =
+    {
         (eeprom ? CMD_EEPROM : CMD_DAC) | (((uint8_t)mode & 3) << 1),
         value >> 4,
-        value << 4
+              value << 4
     };
 
     I2C_DEV_TAKE_MUTEX(dev);
@@ -140,8 +141,8 @@ esp_err_t mcp4725_get_raw_output(i2c_dev_t *dev, bool eeprom, uint16_t *value)
     CHECK(read_data(dev, buf, eeprom ? 5 : 3));
 
     *value = eeprom
-        ? ((uint16_t)(buf[3] & 0x0f) << 8) | buf[4]
-        : ((uint16_t)buf[0] << 4) | (buf[1] >> 4);
+             ? ((uint16_t)(buf[3] & 0x0f) << 8) | buf[4]
+             : ((uint16_t)buf[0] << 4) | (buf[1] >> 4);
 
     return ESP_OK;
 }
@@ -150,10 +151,11 @@ esp_err_t mcp4725_set_raw_output(i2c_dev_t *dev, uint16_t value, bool eeprom)
 {
     CHECK_ARG(dev);
 
-    uint8_t data[] = {
+    uint8_t data[] =
+    {
         (eeprom ? CMD_EEPROM : CMD_DAC),
         value >> 4,
-        value << 4
+              value << 4
     };
 
     ESP_LOGV(TAG, "Set output value to %u", value);
